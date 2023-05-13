@@ -1,0 +1,333 @@
+body{
+    background-color: #151515;
+}
+#myData{
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 70%;
+    height: 0;
+    justify-content: center;
+    gap: 20px;
+    background-color: #f3f3f3;
+    z-index: 23;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    overflow: hidden;
+    transition: .3s;
+}
+.open{
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+    height: 50% !important;
+    transition: .3s;
+}
+#upload {
+    height: 40px;
+    width: 40px;
+    border: 1px solid rgb(117, 142, 211) ;
+    background-color: rgb(117, 142, 211);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    border-radius: 50%;
+    position: fixed;
+    bottom: 30px;
+    left: 30px;
+    transition: .3s;
+    z-index: 20;
+}
+
+#upload:hover {
+ background-color: transparent;
+ color: rgb(117, 142, 211);
+ transition: .3s;
+}
+#upload:hover i {
+    color: rgb(117, 142, 211);
+    transition: .3s;
+   }
+
+#upload i {
+    color: #f3f3f3;
+}
+
+.cats{
+    height: 400px;
+    width: 400px;
+    object-fit: contain;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    cursor: pointer;
+    position: relative;
+    border-radius: 5px;
+    box-shadow: rgba(211, 219, 224, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+}
+.catImage{
+    height: 100%;
+    width: 100%;
+    transition: .3s;
+}
+
+#content{
+    width: 100%;
+    height: 100%;
+    padding: 30px 0 30px 0;
+    display: flex;
+    gap: 40px;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 150px;
+    padding-left: 20px;
+    padding-right: 20px;
+
+ }
+ .catName{
+    position: absolute;
+    bottom: 0;
+    background-color:rgba(117, 142, 211, 0.6);
+    height: 0;
+    width: 100%;
+    overflow: hidden;
+    transition: .3s;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding-left: 30px;
+    padding-right: 30px;
+    cursor: default;
+ }
+ .catName h3,p{
+   width: 30%;
+   color: white;
+ }
+ .catName .likes{
+    width: 30%;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    height: 100%;
+  }
+
+ .cats:hover .catImage{
+   scale: 1.2;
+    transition: .3s;
+
+ }
+ .cats:hover .catName {
+    height: 50px;
+    transition: .3s;
+  }
+  
+ .cats i{
+    font-size: 1.5rem;
+    cursor: pointer;
+  }
+#myData input{
+    width: 90%;
+    height: 30px;
+    padding-left: 15px;
+}
+#myData button{
+    width: 50px;
+}
+.top{
+    height: 140px;
+    width: 100%;
+    background-color: #121212;
+    position: fixed;
+    top: 0;
+    z-index: 25;
+    display: flex;
+    align-items: center;
+    padding-left: 5px;
+    border-bottom: 1px solid grey;
+    gap: 10px;
+    padding-left: 30px;
+    
+}
+.top img {
+    height: 30px;
+    width: 30px;
+}
+.top h2{
+   width: 20%;
+   color: white;
+   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+   text-align: center;
+}
+#login{
+  position: fixed;
+  right: 100px;
+}
+.topCats{
+    height: 30%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+  
+}
+.topCats p{
+    color: white;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    
+}
+.topLikes{
+  width: 80px;
+  overflow: hidden;
+}
+.topCat{
+    width: 15%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding-top: 10px;
+    gap: 5px;
+}
+
+.closing{
+    height: 100vh;
+    width: 100%;
+    position: fixed;
+    z-index: 22;
+}
+
+@media only screen and  (max-width: 1024px) {
+
+    .cats:hover .catImage{
+        scale: 1;
+         transition: .3s;
+     
+      }
+
+      .catName{
+        position: absolute;
+        bottom: 0;
+        background-color:rgba(117, 142, 211, 0.6);
+        height: 15%;
+        width: 100%;
+        overflow: hidden;
+        transition: .3s;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        padding-left: 30px;
+        padding-right: 30px;
+        cursor: default;
+     }
+     #upload:hover {
+        background-color: rgb(117, 142, 211);
+       }
+       #upload:hover i {
+           color: white;
+          }
+
+          .top h2{
+            font-size: 1rem;
+          }
+          .cats{
+            height: 300px;
+            width: 300px;
+          }
+          .catName{
+            height: 50px;
+            background-color: rgb(117, 142, 211);
+       
+          }
+          .cats i{
+            font-size: 1.4rem;
+          }
+          #upload{
+            left: 10px;
+            bottom: 10px;
+          }
+
+          .catImage{
+            height: 85% !important;
+     
+        }
+
+        #login{
+          position: fixed;
+          right: 20px;
+        }
+  }
+  
+
+  #name{
+    border: 1px solid grey;
+    border-radius: 15px;
+    background-color: transparent;
+  }
+  #addBtn{
+    width: 50px;
+    height: 30px;
+    border: 1px solid rgb(77, 73, 73);
+    border-radius: 8px;
+    color: white;
+    background-color: grey;
+  }
+
+
+
+
+  .loadingPage{
+    position: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height:80vh;
+    width:100%;
+
+  }
+
+
+
+  .lds-ring {
+    display: inline-block;
+    position: relative;
+    width: 80px;
+    height: 80px;
+  }
+  .lds-ring div {
+    box-sizing: border-box;
+    display: block;
+    position: absolute;
+    width: 64px;
+    height: 64px;
+    margin: 8px;
+    border: 8px solid #fff;
+    border-radius: 50%;
+    animation: lds-ring 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
+    border-color: #fff transparent transparent transparent;
+  }
+  .lds-ring div:nth-child(1) {
+    animation-delay: -0.45s;
+  }
+  .lds-ring div:nth-child(2) {
+    animation-delay: -0.3s;
+  }
+  .lds-ring div:nth-child(3) {
+    animation-delay: -0.15s;
+  }
+  @keyframes lds-ring {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+.liked {
+    color: rgb(226, 53, 53) !important;
+  }
+  
